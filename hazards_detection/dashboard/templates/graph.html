@@ -157,6 +157,49 @@
                 </div>
                 
             </div>
+
+            <div class="row row-card-no-pd">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-head-row">
+                                <h4 class="card-title">Variable relationships</h4>
+                                <div class="card-tools">
+                                    <button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
+                                    <button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
+                                    <button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
+                                </div>
+                            </div>
+                            <p class="card-category">
+                            The behavior of a variable with respect to the others, taking into account the PM greater than 2.5 identified as the color Red (1) and the one less than 2.5 identified as Blue (0).</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div clas="graph">
+                                        {% load plotly_dash%}
+                                        {% plotly_header %}
+                                        </head>
+                                        <body>
+                                            {% plotly_direct name="SimpleExample"%}
+                                        </body>
+                                        {% plotly_footer %}
+                                    <div>
+                                    
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mapcontainer">
+                                        <div id="map-example" class="vmap"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="row">
                 <div class="col-md-8">
                     <div class="card">
@@ -248,46 +291,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row row-card-no-pd">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-head-row">
-                                <h4 class="card-title">Users Geolocation</h4>
-                                <div class="card-tools">
-                                    <button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
-                                    <button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
-                                    <button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
-                                </div>
-                            </div>
-                            <p class="card-category">
-                            Map of the distribution of users around the world</p>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div clas="graph">
-                                        {% load plotly_dash%}
-                                        {% plotly_header %}
-                                        </head>
-                                        <body>
-                                            {% plotly_direct name="SimpleExample"%}
-                                        </body>
-                                        {% plotly_footer %}
-                                    <div>
-                                    
-                                    
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mapcontainer">
-                                        <div id="map-example" class="vmap"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
