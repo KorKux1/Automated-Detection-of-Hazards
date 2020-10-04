@@ -33,8 +33,8 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers">
-                                        <p class="card-category">Records in {{context.year}} </p>
-                                        <h4 class="card-title">150GB</h4>
+                                        <p class="card-category">Records in {{year}} </p>
+                                        <h4 class="card-title"> {{records}} </h4>
                                     </div>
                                 </div>
                             </div>
@@ -52,8 +52,8 @@
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers">
-                                        <p class="card-category">Revenue</p>
-                                        <h4 class="card-title">$ 1,345</h4>
+                                        <p class="card-category">Average RH</p>
+                                        <h4 class="card-title">{{RH_average|floatformat:2  }}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -66,13 +66,13 @@
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
-                                        <i class="flaticon-error text-danger"></i>
+                                        <i class="flaticon-graph-2 text-primary"></i>
                                     </div>
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers">
-                                        <p class="card-category">Errors</p>
-                                        <h4 class="card-title">23</h4>
+                                        <p class="card-category">Average UGRD</p>
+                                        <h4 class="card-title">{{UGRD_average | floatformat:2}}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -85,19 +85,77 @@
                             <div class="row">
                                 <div class="col-5">
                                     <div class="icon-big text-center">
-                                        <i class="flaticon-twitter text-primary"></i>
+                                        <i class="flaticon-interface"></i>
                                     </div>
                                 </div>
                                 <div class="col-7 col-stats">
                                     <div class="numbers">
-                                        <p class="card-category">Followers</p>
-                                        <h4 class="card-title">+45K</h4>
+                                        <p class="card-category">Average VGRD</p>
+                                        <h4 class="card-title">{{VGRD_average|floatformat:2  }}</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-stats card-round">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="icon-big text-center">
+                                        <i class="flaticon-graph-2 text-success"></i>
+                                    </div>
+                                </div>
+                                <div class="col-7 col-stats">
+                                    <div class="numbers">
+                                        <p class="card-category">Average HPBL
+                                        <h4 class="card-title"> {{HPBL_average |floatformat:2}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-stats card-round">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="icon-big text-center">
+                                        <i class="flaticon-interface-4 text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="col-7 col-stats">
+                                    <div class="numbers">
+                                        <p class="card-category">Average TMP</p>
+                                        <h4 class="card-title">{{TMP_average|floatformat:2  }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-stats card-round">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="icon-big text-center">
+                                        <i class="flaticon-box-3 text-danger"></i>
+                                    </div>
+                                </div>
+                                <div class="col-7 col-stats">
+                                    <div class="numbers">
+                                        <p class="card-category">Average GOES</p>
+                                        <h4 class="card-title">{{GOES_average|floatformat:2  }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div class="row">
                 <div class="col-md-8">
