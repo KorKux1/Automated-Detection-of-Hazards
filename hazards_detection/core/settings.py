@@ -28,7 +28,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-THIRD_PARTY_APPS = []
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+
+THIRD_PARTY_APPS = [
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'bootstrap4'
+]
 
 LOCAL_APPS = [
     'dashboard.apps.DashboardConfig',
@@ -53,6 +59,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'django_plotly_dash.middleware.BaseMiddleware',
+    'django_plotly_dash.middleware.ExternalRedirectionMiddleware',
+
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -128,6 +138,34 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'core/static')
 
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static'),
+]
+
+
+STATICFILES_FINDERS = [
+
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
+    'django_plotly_dash.finders.DashAssetFinder',
+    'django_plotly_dash.finders.DashComponentFinder',
+    'django_plotly_dash.finders.DashAppDirectoryFinder',
+]
+
+
+PLOTLY_COMPONENTS = [
+
+    # Common components
+    'dash_core_components',
+    'dash_html_components',
+    'dash_renderer',
+
+    # django-plotly-dash components
+    'dpd_components',
+    # static support if serving local assets
+    'dpd_static_support',
+
+    # Other components, as needed
+    # 'dash_bootstrap_components',
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'core/media')

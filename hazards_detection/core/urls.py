@@ -21,5 +21,6 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(('dashboard.urls', 'dashboard'), namespace='dashboard')),
+    path('', include(('dashboard.urls'))),
+    path('django_plotly_dash/', include('django_plotly_dash.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
