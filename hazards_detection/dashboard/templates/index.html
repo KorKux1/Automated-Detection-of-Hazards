@@ -1,0 +1,85 @@
+{% extends "base_dashboard.html" %}
+
+{% load static %}
+
+
+{% block head_content %}
+<title>Dashboard</title>
+{% endblock %}
+
+{% block main %}
+
+<div class="main-panel">
+			<div class="content">
+				<div class="page-inner">
+					<div class="mt-2 mb-4">
+						<h2 class="text-white pb-2">Welcome To AQUDA</h2>
+						<h5 class="text-white op-7 mb-4">
+						We propose a data integration and prediction system (AQUDA), that has state-of-the-art machine learning algorithms for novelty detection and a web app that includes dashboards that allow any researcher to make real time decisions, moreover the system is designed that any user regardless of his or her academic background can receive some information about the actual situation of the geographic zone with the purpose to bring awareness of climate change. We consider it a very important problem to solve, because we want to make people conscious that pollution is getting worse due to vehicles and industries that throw out harmful gases to the atmosphere, and if we don't act now, there will be an irreversible damage.
+						</h5>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">Related Links</div>
+								</div>
+								<div class="card-body pb-0">
+									<div class="d-flex">
+										<div class="avatar">
+											<img src="{% static 'img/github.png' %}" alt="Github" class="avatar-img rounded-circle">
+										</div>
+										<div class="flex-1 pt-1 ml-2">
+											<a href="https://github.com/KorKux1/Automated-Detection-of-Hazards">
+												<h6 class="fw-bold mb-1">Github</h6>
+											</a>
+										</div>
+									</div>
+									<div class="separator-dashed"></div>
+									<div class="d-flex">
+										<div class="avatar">
+											<img src="{% static 'img/spaceapps.svg' %}" alt="..." class="avatar-img rounded-circle">
+										</div>
+										<div class="flex-1 pt-1 ml-2">
+											<a  href="https://2020.spaceappschallenge.org/challenges/inform/automated-detection-hazards/teams/mlonfire/project">
+											<h6 class="fw-bold mb-1">Space Apps Challenge</h6>								
+											</a>		
+										</div>
+									</div>
+									<div class="separator-dashed"></div>
+									
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.themekita.com">
+									ThemeKita
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Help
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Licenses
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
+					</div>				
+				</div>
+			</footer>
+		</div>
+
+{% endblock %}
