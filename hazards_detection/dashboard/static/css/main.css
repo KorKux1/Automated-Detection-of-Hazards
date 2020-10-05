@@ -1,0 +1,8 @@
+body  div.wrapper .graph{
+    height: 520px !important;
+}
+
+.logo-header{
+    display:flex;
+    justify-content:center;
+}
